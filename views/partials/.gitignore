@@ -1,0 +1,7 @@
+.idea
+node_modules
+node_modules
+docker_image.sh
+npm-debug.log
+.vscode/
+*/npm-debug.log.*

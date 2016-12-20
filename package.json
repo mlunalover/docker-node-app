@@ -1,0 +1,16 @@
+{
+  "name": "docker_web_app",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "Matt Lunalover",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "nodemon": "*",
+    "ejs": "2.5.5",
+    "express": "^4.13.3",
+    "body-parser": "*"
+  }
+}

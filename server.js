@@ -27,17 +27,29 @@ app.get('/about', function(req, res) {
 });
 
 //body-parser is the middleware needed to parse the post data of the body.
-var bodyParser = require('body-parser')
-app.use( bodyParser.json() );
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+// var bodyParser = require('body-parser')
+// app.use( bodyParser.json() );
+// app.use(bodyParser.urlencoded({
+//     extended: true
+// }));
+
+//multer middleware needed for handling multipart/form-data
+const multer  = require('multer');
+const upload = multer({ dest: 'uploads/' });
+
+app.post('/', multer({ dest: './uploads/'}).any(), function(req, res){
+    console.log(req.body);
+    console.log(req.file);
+
+    res.render('pages/successful');
+    res.status(204).end();
+})
 
 //form post
-app.post('/', function(req, res){
-    console.log(req.body);
-    // res.sendFile('pages/about');
-});
+// app.post('/', function(req, res){
+//     console.log(req.body);
+//     // res.sendFile('pages/about');
+// });
 
 //TODO API requests with express can also use request for more options
 

@@ -11,6 +11,7 @@
     "nodemon": "*",
     "ejs": "2.5.5",
     "express": "^4.13.3",
-    "body-parser": "*"
+    "body-parser": "*",
+    "multer": "*"
   }
 }

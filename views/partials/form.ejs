@@ -2,24 +2,31 @@
     <!-- represents the ID of the job post -->
     <input type="hidden" name="id" value="55555" />
     <!-- place the value of the gh_src URL parameter in the field below -->
-    <input type="hidden" name="mapped_url_token" />
+    <!--<input type="hidden" name="mapped_url_token" />-->
     <label>First Name <input type="text" name="first_name" /></label><br/>
     <label>Last Name <input type="text" name="last_name" /></label><br/>
     <label>Email <input type="text" name="email" /></label><br/>
     <label>Phone <input type="text" name="phone" /></label><br/>
-    <label>Resume <input type="file" name="resume" /></label><br/>
-    <label>Cover Letter <input type="file" name="cover_letter" /></label><br/>
-    <label>LinkedIn Profile <input type="text" name="question_5555" /></label><br/>
-    <label>Some dropdown
-        <select name="question_3333">
+    <label>Location(City) <input type="text" name="location" /></label><br/>
+    <label>Position <input type="text" name="position" /></label><br/>
+    <label>Team
+        <select name="team">
             <option></option>
-            <option value="1">Yes</option>
-            <option value="0">No</option>
+            <option value="Dev Ops">Dev Ops</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Infrastructure">Infrastructure</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Sales">Sales</option>
+            <option value="Customer Service">Customer Service</option>
+            <option value="Finance">Finance</option>
+            <option value="People Ops">People Ops</option>
         </select>
     </label><br/>
-    <label>Multi select with checkboxes<br/>
-        <label><input type="checkbox" name="question_2222[]" value="2" /> Red</label><br/>
-        <label><input type="checkbox" name="question_2222[]" value="5" /> Orange</label>
-    </label><br/>
+    <label>Why are you perfect for that job? <input type="text" name="question_job" /></label><br/>
+    <label>What about the company makes you excited to work here? <input type="text" name="question_excited" /></label><br/>
+    <label>Resume <input type="file" name="resume" /></label><br/>
+    <label>Cover Letter <input type="file" name="cover_letter" /></label><br/>
+    <label>LinkedIn Profile <input type="text" name="linkedin" /></label><br/>
+    <label>Website <input type="text" name="website" /></label><br/>
     <input type="submit" />
 </form>

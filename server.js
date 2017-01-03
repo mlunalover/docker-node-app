@@ -26,6 +26,11 @@ app.get('/about', function(req, res) {
     res.render('pages/about');
 });
 
+// successful page
+app.get('/successful', function(req, res) {
+    res.render('pages/successful');
+});
+
 //body-parser is the middleware needed to parse the post data of the body.
 // var bodyParser = require('body-parser')
 // app.use( bodyParser.json() );
@@ -39,7 +44,7 @@ const upload = multer({ dest: 'uploads/' });
 
 app.post('/', multer({ dest: './uploads/'}).any(), function(req, res){
     console.log(req.body);
-    console.log(req.file);
+    console.log(req.files);
 
     res.render('pages/successful');
     res.status(204).end();
@@ -48,7 +53,6 @@ app.post('/', multer({ dest: './uploads/'}).any(), function(req, res){
 //form post
 // app.post('/', function(req, res){
 //     console.log(req.body);
-//     // res.sendFile('pages/about');
 // });
 
 //TODO API requests with express can also use request for more options
